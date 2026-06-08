@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Pink -->
+    <color name="pinkPrimary">#F8BBD0</color>
+
+    <!-- Darker Pink -->
+    <color name="pinkDark">#F48FB1</color>
+
+    <!-- Soft Rose -->
+    <color name="rosePink">#FCE4EC</color>
+
+    <!-- Button Pink -->
+    <color name="buttonPink">#EC407A</color>
+
+    <!-- White -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="darkText">#4A4A4A</color>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.BillApp"
+        parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/pinkPrimary</item>
+        <item name="colorSecondary">@color/pinkDark</item>
+
+    </style>
+
+    <style name="Theme.BillApp"
+        parent="Base.Theme.BillApp" />
+
+</resources>
