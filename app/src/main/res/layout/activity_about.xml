@@ -3,6 +3,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/rosePink">
 
     <LinearLayout
@@ -11,22 +12,37 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <ImageView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌸 About Me"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/buttonPink"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgStudent"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:layout_gravity="center"
-            android:src="@drawable/me"/>
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/me"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/buttonPink"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About Me"
-            android:textSize="24sp"
+            android:text="INSYIRAH CS2405C"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/darkText"
             android:layout_gravity="center"
-            android:padding="15dp"/>
+            android:padding="8dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

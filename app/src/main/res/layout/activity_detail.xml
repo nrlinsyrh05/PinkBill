@@ -12,15 +12,23 @@
         android:padding="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Record Details"
+            android:text="📝 Record Details"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/buttonPink"
+            android:gravity="center"
+            android:padding="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Update or delete your electricity bill record."
             android:textColor="@color/darkText"
-            android:layout_gravity="center"
-            android:paddingBottom="20dp"/>
-
+            android:gravity="center"
+            android:padding="12dp"/>
         <EditText
             android:id="@+id/etMonth"
             android:layout_width="match_parent"
