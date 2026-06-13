@@ -118,7 +118,7 @@
                     android:id="@+id/tvGithub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="https://github.com/nrlinsyrh05/BillAppFinal.git"
+                    android:text="https://github.com/nrlinsyrh05/PinkBill.git"
                     android:textColor="@color/buttonPink"/>
 
             </LinearLayout>
