@@ -11,6 +11,8 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!-- Header -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,76 +22,130 @@
             android:textColor="@color/white"
             android:background="@color/buttonPink"
             android:gravity="center"
-            android:padding="16dp"/>
+            android:padding="16dp" />
+
+        <!-- Instruction -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="View, update or delete your electricity bill record."
             android:textStyle="bold"
-            android:text="Update or delete your electricity bill record."
             android:textColor="@color/darkText"
             android:gravity="center"
-            android:padding="12dp"/>
+            android:padding="12dp" />
+
+        <!-- Month -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textStyle="bold"
+            android:textColor="@color/darkText" />
+
         <EditText
             android:id="@+id/etMonth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Month"
             android:background="@color/white"
-            android:padding="12dp"/>
+            android:padding="12dp" />
+
+        <!-- Units Used -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Units Used (kWh)"
+            android:textStyle="bold"
+            android:textColor="@color/darkText" />
 
         <EditText
             android:id="@+id/etUnit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Unit Used"
             android:background="@color/white"
-            android:padding="12dp"
-            android:layout_marginTop="10dp"/>
+            android:inputType="number"
+            android:padding="12dp" />
+
+        <!-- Total Charges -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Total Charges (RM)"
+            android:textStyle="bold"
+            android:textColor="@color/darkText" />
 
         <EditText
             android:id="@+id/etTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Total Charge"
             android:background="@color/white"
-            android:padding="12dp"
-            android:layout_marginTop="10dp"/>
+            android:focusable="false"
+            android:clickable="false"
+            android:padding="12dp" />
+
+        <!-- Rebate -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Rebate (%)"
+            android:textStyle="bold"
+            android:textColor="@color/darkText" />
 
         <EditText
             android:id="@+id/etRebate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Rebate"
             android:background="@color/white"
-            android:padding="12dp"
-            android:layout_marginTop="10dp"/>
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <!-- Final Cost -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Final Cost (RM)"
+            android:textStyle="bold"
+            android:textColor="@color/darkText" />
 
         <EditText
             android:id="@+id/etFinal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Final Cost"
             android:background="@color/white"
-            android:padding="12dp"
-            android:layout_marginTop="10dp"/>
+            android:focusable="false"
+            android:clickable="false"
+            android:padding="12dp" />
+
+        <!-- Update Button -->
 
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Update Record"
             android:textColor="@color/white"
-            android:backgroundTint="@color/buttonPink"
-            android:layout_marginTop="20dp"/>
+            android:backgroundTint="@color/buttonPink" />
+
+        <!-- Delete Button -->
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Delete Record"
             android:textColor="@color/white"
-            android:backgroundTint="@color/pinkDark"
-            android:layout_marginTop="10dp"/>
+            android:backgroundTint="@color/pinkDark" />
 
     </LinearLayout>
 

@@ -27,6 +27,7 @@
         android:gravity="center"
         android:padding="12dp"/>
 
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

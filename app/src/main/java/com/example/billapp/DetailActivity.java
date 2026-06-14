@@ -79,7 +79,22 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    private void updateRecord(){
+    private void updateRecord() {
+
+        String month = etMonth.getText().toString();
+
+        int unit = Integer.parseInt(
+                etUnit.getText().toString());
+
+        double rebate = Double.parseDouble(
+                etRebate.getText().toString());
+
+        // Recalculate Total Charge
+        double totalCharge = calculateCharge(unit);
+
+        // Recalculate Final Cost
+        double finalCost =
+                totalCharge - (totalCharge * rebate / 100);
 
         SQLiteDatabase db =
                 dbHelper.getWritableDatabase();
@@ -87,24 +102,11 @@ public class DetailActivity extends AppCompatActivity {
         ContentValues cv =
                 new ContentValues();
 
-        cv.put("month",
-                etMonth.getText().toString());
-
-        cv.put("unit",
-                Integer.parseInt(
-                        etUnit.getText().toString()));
-
-        cv.put("totalCharge",
-                Double.parseDouble(
-                        etTotal.getText().toString()));
-
-        cv.put("rebate",
-                Double.parseDouble(
-                        etRebate.getText().toString()));
-
-        cv.put("finalCost",
-                Double.parseDouble(
-                        etFinal.getText().toString()));
+        cv.put("month", month);
+        cv.put("unit", unit);
+        cv.put("totalCharge", totalCharge);
+        cv.put("rebate", rebate);
+        cv.put("finalCost", finalCost);
 
         db.update(
                 "bill",
@@ -140,5 +142,35 @@ public class DetailActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
 
         finish();
+    }
+
+    private double calculateCharge(int unit) {
+
+        double total = 0;
+
+        if (unit <= 200) {
+
+            total = unit * 0.218;
+
+        } else if (unit <= 300) {
+
+            total = (200 * 0.218)
+                    + ((unit - 200) * 0.334);
+
+        } else if (unit <= 600) {
+
+            total = (200 * 0.218)
+                    + (100 * 0.334)
+                    + ((unit - 300) * 0.516);
+
+        } else {
+
+            total = (200 * 0.218)
+                    + (100 * 0.334)
+                    + (300 * 0.516)
+                    + ((unit - 600) * 0.546);
+        }
+
+        return total;
     }
 }
