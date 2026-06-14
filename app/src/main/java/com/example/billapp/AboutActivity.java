@@ -26,7 +26,7 @@ public class AboutActivity extends AppCompatActivity {
                             Intent.ACTION_VIEW,
 
                             Uri.parse(
-                                    "https://github.com/nrlinsyrh05/BillAppFinal.git"));
+                                    "https://github.com/nrlinsyrh05/PinkBill.git"));
 
             startActivity(browserIntent);
         });
